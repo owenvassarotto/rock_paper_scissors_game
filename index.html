@@ -22,9 +22,9 @@
         <p class="name player-name">Player</p>
         <p class="name computer-name">Computer</p>
         <div class="score">
-          <span class="player-score">0</span>
+          <span id="player-score">0</span>
           <span>-</span>
-          <span class="computer-score">0</span>
+          <span id="computer-score">0</span>
         </div>
       </div>
       <div class="choose-option" id="choose-option">
@@ -37,12 +37,12 @@
       </div>
       <div class="message" id="message">
         <p class="results">
-          You chose <span class="choice" id="user-choice">paper🧻</span><br />
+          You chose <span class="choice" id="player-choice">paper🧻</span><br />
           and the computer chose <span class="choice" id="computer-choice"
             >rock🪨</span
           >
         </p>
-        <p class="win-point">You win a point! 🔥</p>
+        <p class="win-point" id="win-point">You win a point! 🔥</p>
       </div>
 
       <button class="btn-restart" id="btn-restart">Restart game</button>
