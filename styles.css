@@ -16,8 +16,133 @@ html {
 }
 
 :root {
-  --yellow: #ffff5f;
+  --yellow: #ffff58;
   --darkGray: #2a2a2a;
+  --lightGray: #c9c9c9;
   --white: #fff;
   --black: #000;
+}
+
+body{
+  background-color: var(--darkGray);
+  color: var(--lightGray);
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--yellow);
+  padding: 1.5rem;
+  text-align: center;
+  border: 5px solid var(--darkGray);
+  border-radius: 1.5rem;
+}
+.header h1,
+.header p{
+  color: var(--darkGray);
+}
+.header h1{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.header h1 span{
+  text-transform: uppercase;
+  border: 2px solid var(--darkGray);
+}
+.header p{
+  font-size: 1.5rem;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.instructions{
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.marker{
+  background-color: #3d3d3d;
+  padding: 6rem 8rem;
+  border: .5px solid #242424;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.marker .name{
+  position: absolute;
+  background-color: var(--black);
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+}
+.marker .player-name{
+  left: -3rem;
+}
+.marker .computer-name{
+  right: -5rem;
+}
+.marker .score{
+  font-size: 2.5rem;
+}
+
+.choose-option{
+  margin-bottom: 3rem;
+}
+.choose-option h2{
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.choose-option .options{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.choose-option .options .option{
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3d3d3d;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  height: 7rem;
+  width: 7rem;
+}
+.choose-option .options .option:hover{
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+
+.message{
+  margin-bottom: 3rem;
+}
+.message p{
+  font-size: 1.5rem;
+}
+.message .results{
+  margin-bottom: 1.5rem;
+}
+
+.btn-restart{
+  background-color: #474747;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-restart:hover{
+  background-color: #4e4e4e;
 }
