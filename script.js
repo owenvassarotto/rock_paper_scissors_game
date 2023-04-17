@@ -6,6 +6,8 @@ let playerScoreMarker = document.querySelector("#player-score");
 let computerScoreMarker = document.querySelector("#computer-score");
 let message = document.querySelector("#message");
 let youWonLost = document.querySelector("#you-won-lost");
+let chooseOption = document.querySelector("#choose-option");
+let btnRestart = document.querySelector("#btn-restart");
 
 let playerChoice = document.querySelector("#player-choice");
 let computerChoice = document.querySelector("#computer-choice");
@@ -51,6 +53,22 @@ function startTurn(e) {
     else{
         tie();
     }
+
+    showMessage(playerOption, computerOption);
+
+    if(playerScore === 5 || computerScore === 5){
+
+        chooseOption.classList.add("disabled");
+        btnRestart.classList.remove("disabled");
+        btnRestart.addEventListener("click", restartGame);
+
+        if(playerScore === 5){
+            instructions.innerHTML = "🔥 YOU WON THE GAME! 🔥"
+        }
+        else if(computerScore === 5){
+            instructions.innerHTML = "😭 THE COMPUTER WON THE GAME! 😭"
+        }
+    }
 }
 
 function playerWins(){
@@ -67,4 +85,23 @@ function computerWins(){
 
 function tie(){
     youWonLost.innerHTML = "It's a tie! 🙉";
+}
+
+function showMessage(par1, par2){
+    message.classList.remove("disabled");
+    playerChoice.innerHTML = par1;
+    computerChoice.innerHTML = par2;
+}
+
+function restartGame(){
+    btnRestart.classList.add("disabled");
+    chooseOption.classList.remove("disabled");
+    message.classList.add("disabled");
+
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreMarker.innerHTML = playerScore;
+    computerScoreMarker.innerHTML = computerScore;
+
+    instructions.innerHTML = "The first to reach 5 points wins";
 }
