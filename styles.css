@@ -168,3 +168,10 @@ main{
   color: var(--yellow);
   font-weight: bold;
 }
+
+.results .choice{
+  text-transform: uppercase;
+}
+.message .you-won-lost{
+  font-weight: bold;
+}
