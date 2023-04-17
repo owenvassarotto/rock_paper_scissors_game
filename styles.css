@@ -59,7 +59,7 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
@@ -150,4 +150,21 @@ main{
 
 .disabled{
   display: none;
+}
+
+.footer{
+  background-color: #1f1f1f;
+  padding: 1.2rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer p{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.footer p a{
+  color: var(--yellow);
+  font-weight: bold;
 }
