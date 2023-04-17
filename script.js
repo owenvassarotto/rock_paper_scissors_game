@@ -54,5 +54,17 @@ function startTurn(e) {
 }
 
 function playerWins(){
-    
+    playerScore++;
+    playerScoreMarker.innerText = playerScore;
+    youWonLost.innerHTML = "You won a point! 🔥";
+}
+
+function computerWins(){
+    computerScore++;
+    computerScoreMarker.innerText = computerScore;
+    youWonLost.innerHTML = "The computer won a point! 😭"
+}
+
+function tie(){
+    youWonLost.innerHTML = "It's a tie! 🙉";
 }
